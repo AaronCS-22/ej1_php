@@ -45,10 +45,38 @@ Route::get('/', function () {
 });
 ```
 
+## Autenticación
+### Cargar layout
+En la carpeta ```resources/views/auth``` moficiar todos los ficheros de autenticación (```login.blade.php``` y ```register.blade.php```, etc.) para añadirles el layout que hemos creado.
+### Decoración
+Dentro de cada ```<x-layouts.layout>``` de los ficheros, englobar el código de la siguiente forma:
+```bladehtml
+<x-layouts.layout>
+    <div class="flex flex-row justify-center items-center min-h-full bg-gray-300">
+        <div class="bg-white p-4 rounded-xl">
+            [...]
+            RESTO DEL CÓDIGO
+            [...]
+        </div>
+    </div>
+</x-layouts.layout>
+```
+### Cambiar rutas
+Al registrarse, iniciar sesión, etc., se envía al usuario a dashboard.blade.php.
 
+Para corregir el problema, debemos entrar en la carpeta ```app/Http/Controllers``` y modificar en todos los ficheros la ruta ``dashboard`` por la ruta ```main``` (incluyendo los ficheros dentro de la carpeta ```Auth```.
 
+Por ejemplo, en ProfileController.php, hay que cambiar la siguiente línea:
 
+```php
+return Redirect::to('dashboard');
+```
+por:
+```php
+return Redirect::to('main');
+```
 
+Una vez realizado los cambios, se puede eliminar el fichero ```dashboard.blade.php``` junto con su ruta en ```web.php```
 
 (PARA EL FINAL)
 npm build y deploy
