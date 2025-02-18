@@ -5,8 +5,8 @@
     <div class="flex flex-row justify-end">
         @guest
             <form action="">
-                <a href="{{route("login")}}" class="btn btn-sm btn-primary mr-5">Login</a>
-                <a href="{{route("register")}}" class="btn btn-sm">Register</a>
+                <a href="{{route("login")}}" class="btn btn-sm btn-primary mr-5">Acceder</a>
+                <a href="{{route("register")}}" class="btn btn-sm">Crear cuenta</a>
             </form>
         @endguest
         @auth
@@ -21,9 +21,7 @@
                 <span class="mr-5">{{auth()->user()->name}}</span>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <button type="submit" class="btn btn-sm">
-                        {{ __('Log Out') }}
-                    </button>
+                    <button type="submit" class="btn btn-sm">Cerrar sesión</button>
                 </form>
             </div>
         @endauth

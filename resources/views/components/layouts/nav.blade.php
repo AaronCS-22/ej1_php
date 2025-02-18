@@ -1,5 +1,5 @@
 <div class="md:h-6v btm-nav bg-nav flex flex-col md:flex-row justify-around item-center ">
-    <a href="{{route("main")}}" class="bg-sky-200 text-sky-600 grow flex flex-col items-center justify-center">
+    <a href="{{route("home")}}" class="bg-purple-200 text-purple-600 grow flex flex-col items-center justify-center">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"

@@ -27,7 +27,7 @@ npm i -D daisyui@latest
     │           ├── header.blade.php
     │           ├── layout.blade.php
     │           └── nav.blade.php
-    └── main.blade.php
+    └── home.blade.php
 ```
 
 ***IMPORTANTE***: Redirigir la ruta de la página principal por defecto al `main.blade.php` desde el archivo `routes/web.php`
@@ -41,8 +41,30 @@ Route::get('/', function () {
 ### Después:
 ```php
 Route::get('/', function () {
-    return view('main');
+    return view('home');
 });
+```
+
+## HomeController
+Creamos el controlador ```HomeController.php``` con el siguiente comando en el terminal:
+```bash
+php artisan make:Controller HomeController
+```
+Añadimos el siguiente código dentro del fichero creado:
+
+```php
+class HomeController extends Controller
+{
+    public function index(){
+        return view('home');
+    }
+}
+```
+
+En ```web.php```, añadimos la siguiente línea:
+```php
+ROUTE::get('/', [HomeController::class, 'index'])
+-> name('home');
 ```
 
 ## Autenticación
@@ -73,10 +95,12 @@ return Redirect::to('dashboard');
 ```
 por:
 ```php
-return Redirect::to('main');
+return Redirect::to('home');
 ```
 
 Una vez realizado los cambios, se puede eliminar el fichero ```dashboard.blade.php``` junto con su ruta en ```web.php```
+
+
 
 (PARA EL FINAL)
 npm build y deploy
