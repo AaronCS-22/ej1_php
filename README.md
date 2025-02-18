@@ -66,7 +66,7 @@ Al registrarse, iniciar sesión, etc., se envía al usuario a dashboard.blade.ph
 
 Para corregir el problema, debemos entrar en la carpeta ```app/Http/Controllers``` y modificar en todos los ficheros la ruta ``dashboard`` por la ruta ```main``` (incluyendo los ficheros dentro de la carpeta ```Auth```.
 
-Por ejemplo, en ProfileController.php, hay que cambiar la siguiente línea:
+Por ejemplo, en ```ProfileController.php```, hay que cambiar la siguiente línea:
 
 ```php
 return Redirect::to('dashboard');
