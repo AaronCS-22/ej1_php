@@ -10,19 +10,29 @@
             </form>
         @endguest
         @auth
-            <div class="flex items-center flex-row">
-                <div class="avatar">
-                    <div class="w-16 p-2">
-                        <img class="rounded-full"
-                             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+            <div tabindex="0" role="button" class="dropdown dropdown-end">
+                <div class="flex flex-row mr-5">
+                    <div class="btn btn-ghost btn-circle avatar">
+                        <div class="w-14 rounded-full">
+                            <img
+                                alt="Tailwind CSS Navbar component"
+                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+                        </div>
                     </div>
+                    <span class="content-center ml-5">{{auth()->user()->name}}</span>
                 </div>
-
-                <span class="mr-5">{{auth()->user()->name}}</span>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button type="submit" class="btn btn-sm">Cerrar sesión</button>
-                </form>
+                <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="justify-between text-gray-500">
+                                Cerrar sesión
+                            </button>
+                        </form>
+                    </li>
+                </ul>
             </div>
         @endauth
     </div>
@@ -39,20 +49,28 @@
         </form>
     @endguest
     @auth
-        <div class="flex items-center flex-row">
-            <div class="avatar">
-                <div class="w-16 p-2">
-                    <img class="rounded-full"
-                         src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+        <div tabindex="0" role="button" class="dropdown dropdown-end">
+            <div class="flex flex-row mr-5">
+                <div class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                        <img
+                            alt="Tailwind CSS Navbar component"
+                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+                    </div>
                 </div>
             </div>
-            <span class="hidden md:flex mr-5">{{auth()->user()->name}}</span>
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="btn btn-sm">
-                    {{ __('Log Out') }}
-                </button>
-            </form>
+            <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <li>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="justify-between text-gray-500">
+                            Cerrar sesión
+                        </button>
+                    </form>
+                </li>
+            </ul>
         </div>
     @endauth
 </header>
