@@ -1,14 +1,14 @@
 <x-layouts.layout>
     @guest
         <div
-            class="hero min-h-full"
+            class="hero min-h-full flex flex-row justify-center items-center"
             style="background-image: url(https://cdn.pixabay.com/photo/2015/10/07/11/46/texture-976039_960_720.jpg); background-repeat: no-repeat; background-size: 100%; background-attachment: fixed">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-neutral-content text-center flex justify-center">
-                <div class="max-w-md bg-white shadow-lg rounded-xl justify-center">
-                    <h1 class="mb-5 text-5xl font-bold">¡Buenos días!</h1>
+                <div class="max-w-md shadow-lg rounded-xl" style="background:#ffffffd4;">
+                    <h1 class="mb-5 text-5xl font-bold mt-5 text-cyan-600">¡Buenos días!</h1>
                     <p class="mb-5 p-2">
-                        Para acceder a la gestión del centro, deberás iniciar sesión.
+                        Para acceder a la gestión del centro, deberás <b><a href="{{route("login")}}">iniciar sesión</a></b>.
                     </p>
                 </div>
             </div>

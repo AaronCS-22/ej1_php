@@ -17,4 +17,9 @@ Route::get("/alumnos", [AlumnoController::class, 'index'])
     ->name('alumnos')
     ->middleware('auth');
 
+Route::get('/estadisticas', function () {
+    return view('estadisticas');
+})->name('estadisticas');
+
+
 require __DIR__.'/auth.php';
