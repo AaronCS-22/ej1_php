@@ -1,5 +1,5 @@
 <x-layouts.layout class="p-5" title="Recuperar contraseña">
-    <div class="flex flex-row justify-center items-center min-h-full" style="background-image: url(https://cdn.pixabay.com/photo/2019/04/10/11/56/watercolor-4116932_1280.png); background-repeat: no-repeat; background-size: 100%; background-attachment: fixed">
+    <div class="flex flex-row justify-center items-center min-h-full" style="background-image: url(https://cdn.pixabay.com/photo/2019/04/10/11/56/watercolor-4116932_1280.png); background-repeat: no-repeat; background-size: 100%;">
         <div class="bg-white p-4 rounded-xl">
             <div class="mb-4 text-sm text-gray-600">
                 {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}

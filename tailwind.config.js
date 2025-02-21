@@ -18,6 +18,7 @@ export default {
                 "6v": "6vh",
                 "10v": "10vh",
                 "74v": "74vh",
+                "84v": "84vh"
             },
             colors:{
                 "header":"#3d5a80",

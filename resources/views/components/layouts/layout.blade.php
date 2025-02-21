@@ -11,7 +11,7 @@
 <body>
 <x-layouts.header />
 <x-layouts.nav />
-<main class="h-74v bg-main">
+<main class="lg:h-74v h-84v bg-main">
     {{$slot}}
 </main>
 <x-layouts.footer />

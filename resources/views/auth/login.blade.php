@@ -1,5 +1,5 @@
 <x-layouts.layout title="Iniciar sesión">
-    <div class="flex flex-row justify-center items-center min-h-full" style="background-image: url(https://cdn.pixabay.com/photo/2019/04/10/11/56/watercolor-4116932_1280.png); background-repeat: no-repeat; background-size: 100%; background-attachment: fixed">
+    <div class="flex flex-row justify-center items-center min-h-full" style="background-image: url(https://cdn.pixabay.com/photo/2019/04/10/11/56/watercolor-4116932_1280.png); background-repeat: no-repeat; background-size: 100%;">
         <div class="bg-white p-4 rounded-xl">
             <!-- Session Status -->
             <x-auth-session-status class="mb-4" :status="session('status')"/>
