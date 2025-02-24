@@ -1,7 +1,7 @@
 <x-layouts.layout title="Página principal">
     @guest
         <div
-            class="hero min-h-screen overflow-hidden"
+            class="hero max-h-screen h-84v"
             style="background-image: url(https://cdn.pixabay.com/photo/2015/10/07/11/46/texture-976039_960_720.jpg); background-repeat: no-repeat; background-attachment: fixed;"
             class="bg-cover bg-center sm:bg-contain sm:bg-center">
             <div class="hero-overlay bg-opacity-20"></div>
@@ -18,7 +18,7 @@
     @auth
         {{-- Diseño móviles --}}
             <div
-                class="hero min-h-full"
+                class="hero max-h-screen h-84v"
                 style="background-image: url(https://cdn.pixabay.com/photo/2015/10/07/11/46/texture-976039_960_720.jpg); background-repeat: no-repeat; background-attachment: fixed;"
                 class="bg-cover bg-center sm:bg-contain sm:bg-center">
                 <div class="flex flex-col justify-center">

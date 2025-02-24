@@ -18,16 +18,16 @@ npm i -D daisyui@latest
 ## Creación de ficheros
 
 ```shell
-·
-└── resources
-    ├── views
-    │   └── components
-    │       └── layouts
-    │           ├── footer.blade.php
-    │           ├── header.blade.php
-    │           ├── layout.blade.php
-    │           └── nav.blade.php
-    └── home.blade.php
+📂
+└── 📂 resources
+    ├── 📂 views
+    │   └── 📂 components
+    │       └── 📂 layouts
+    │           ├── 📄 footer.blade.php
+    │           ├── 📄 header.blade.php
+    │           ├── 📄 layout.blade.php
+    │           └── 📄 nav.blade.php
+    └── 📄 home.blade.php
 ```
 
 ***IMPORTANTE***: Redirigir la ruta de la página principal por defecto al `main.blade.php` desde el archivo `routes/web.php`
