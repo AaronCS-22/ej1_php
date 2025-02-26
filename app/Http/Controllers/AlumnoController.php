@@ -53,8 +53,9 @@ class AlumnoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Alumno  $alumno)
     {
-        //
+        $alumno->delete();
+        return redirect("alumnos");
     }
 }
