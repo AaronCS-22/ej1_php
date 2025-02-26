@@ -9,13 +9,5 @@ class Alumno extends Model
 {
     /** @use HasFactory<\Database\Factories\AlumnoFactory> */
     use HasFactory;
-
-    public $hidden=["id", "created_at", "updated_at"];
-    public $fillable=["nombre", "dni", "email", "fecha_nacimiento", "apellido"];
-
-    public function idiomas()
-    {
-        return $this->hasMany(Idioma::class);
-    }
-
+    protected $fillable = ["nombre", "apellido", "dni", "email", "fecha_nacimiento"];
 }

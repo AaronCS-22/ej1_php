@@ -22,7 +22,7 @@
             <span class="btm-nav-label">Home</span>
         </a>
         @auth
-            <a href="{{route("alumnos")}}"
+            <a href="{{route("alumnos.index")}}"
                class="active border-blue-600 bg-blue-200 text-blue-600 grow flex flex-col items-center justify-center">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@
         <span class="btm-nav-label">Home</span>
     </a>
     @auth
-        <a href="{{route("alumnos")}}"
+        <a href="{{route("alumnos.index")}}"
            class="active border-blue-600 bg-blue-200 text-blue-600 grow flex flex-col items-center justify-center">
             <svg
                 xmlns="http://www.w3.org/2000/svg"

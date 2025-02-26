@@ -13,9 +13,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get("/alumnos", [AlumnoController::class, 'index'])
-    ->name('alumnos')
-    ->middleware('auth');
+Route::resource("alumnos", AlumnoController::class);
+
+//Route::get("/alumnos",[AlumnoController::class, "index"])
+//    ->name("alumnos")
+//    ->middleware("auth");
+//;
 
 Route::get('/contacto', function () {
     return view('contacto');
