@@ -26,7 +26,7 @@
                class="active border-blue-600 bg-blue-200 text-blue-600 grow flex flex-col items-center justify-center">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 m-1"
+                    class="h-5 w-5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -81,7 +81,7 @@
            class="active border-blue-600 bg-blue-200 text-blue-600 grow flex flex-col items-center justify-center">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 m-1"
+                class="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor">
